@@ -1,12 +1,15 @@
-import { NgModule, NO_ERRORS_SCHEMA } from "@angular/core";
-import { NativeScriptModule } from "nativescript-angular/nativescript.module";
+import { NativeScriptRouterModule } from 'nativescript-angular/router';
+import { NgModule } from '@angular/core';
 
-import { AppComponent } from "./app.component";
+import { AppComponent } from './app.component';
+import { ComponentsModule, routes } from './components/components.module';
 
 @NgModule({
     declarations: [AppComponent],
     bootstrap: [AppComponent],
-    imports: [NativeScriptModule],
-    schemas: [NO_ERRORS_SCHEMA]
+    imports: [
+        ComponentsModule,
+        NativeScriptRouterModule.forRoot(routes)
+    ]
 })
 export class AppModule { }
