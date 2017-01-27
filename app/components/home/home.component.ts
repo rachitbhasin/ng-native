@@ -4,11 +4,7 @@ import {Component} from '@angular/core';
     moduleId: module.id,
     selector: 'home',
     templateUrl: 'home.component.html',
-    styles: [`
-    .active {
-    color: red;
-    }
-    `]
+    styleUrls: ['home.css']
 })
 export class HomeComponent {
 
